@@ -1,4 +1,5 @@
  
+Mozilla Public License 2.0
 # title
 ## Description
 description
@@ -7,12 +8,12 @@ install
 ## UsageInfo
 user
 ## How to contribute
-contribute
+con
 ## Tests for the application
 test
 ## license
-GNU AGPLv3
+Mozilla Public License 2.0
 ## Github username
-plan
+github
 ## Email
-plan@gmail
+email

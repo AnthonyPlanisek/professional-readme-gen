@@ -4,7 +4,7 @@ const fs = require("fs")
 
 // TODO: Create an array of questions for user input
 const questions = ["what is the title of your project?", "Write a description of your project.", "If applicable, describe the steps required to install your project for the Installation section.", "Provide instructions and examples of your project in use for the Usage section.", "If applicable, provide guidelines on how other developers can contribute to your project.", "If applicable, provide any tests written for your application and provide examples on how to run them.", "choose a license for your project", "What is your GitHub username? (No @ needed)", "What is your Email address?"];
-console.log(questions[8])
+
 
 inquirer
     .prompt([
@@ -58,9 +58,41 @@ inquirer
     .then((answers) => {
         console.log(answers)
         
-        fs.writeFile("README.md",
+      const license = answers.license
+      
+      if (license = "GNU AGPLv3") {
+        return license = "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)"
+      } 
+      else if (license = "GNU GPLv3") {
+        return license = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+      } 
+      else if (license = "GNU LGPLv3") {
+        return license = "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)"
+      } 
+      else if (license = "Mozilla Public License 2.0") {
+        return license = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+      }
+      else if (license = "Apache License 2.0") {
+        return license = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+      }
+      else if (license = "MIT License") {
+        return license = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+      }
+      else if (license = "Boost Software License 1.0") {
+        return license = "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+      } 
+      else if (license = "The Unlicense") {
+        return license = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
+      } else {
+        license = ""
+      }
+
+      console.log("license",license)
+
+      fs.writeFile("README.md",
 
 ` 
+${license}
 # ${answers.title}
 ## Description
 ${answers.description}
@@ -80,9 +112,9 @@ ${answers.github}
 ${answers.email}
 `
 
-        , function (err) {
-            if (err) throw err;
-            console.log('Saved!');
+, function (err) {
+if (err) throw err;
+console.log('Saved!');
         
         
         
