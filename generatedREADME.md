@@ -1,26 +1,26 @@
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) 
- # title 
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0) 
+ # test 
  ## Description 
- des 
+ 1 
  ## Install Guide 
- in 
+ 2 
  ## UsageInfo 
- usera 
+ 3 
  ## How to contribute 
- cont 
+ 4 
  ## Tests for the application 
- exp 
+ 5 
  ## license 
- Mozilla Public License 2.0 
+ GNU LGPLv3 
  ## Github username 
- git 
+ 6 
  ## Email 
- em
+ 7
 ## Table of Contents
 * [Description](#description)
 * [Install](#install)
 * [Usage](#userInfo)
 * [Contribution](#contribution)
-* [Tests](#tests)
+* [Tests](#test)
 * [Github](#github)
 * [Email](#email)
